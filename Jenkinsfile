@@ -16,7 +16,7 @@ pipeline {
     }
     stage('Build Success') {
       steps {
-        echo 'Sucessfully build - Testing env'
+        echo 'Sucessfully build - Production env'
       }
     }
   }
