@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppConfigs } from '../app/app.config';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'newPro';
+  title = AppConfigs.SERVER_CONFIG.USE_URL;
 }
