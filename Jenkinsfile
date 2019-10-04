@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('changing Environment') {
+    stage('Changing Environment') {
       steps {
          sh label: '', script: 'sed -i "s/USE_URL: \'\\(.*\\)\'/USE_URL: \'TESTING\'/g" ./src/app/app.config.ts'
          echo 'Environment - Testing'
