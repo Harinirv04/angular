@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build Angular') {
       steps {
-        echo 'Building Angular'
+        echo 'Building Angular - Testing env'
        
         echo 'Build Complete'
       }
