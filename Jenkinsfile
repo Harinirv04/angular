@@ -1,22 +1,30 @@
 pipeline {
   agent any
   stages {
+    stage('changing Environment') {
+      steps {
+         sh label: '', script: 'sed -i "s/USE_URL: \'\\(.*\\)\'/USE_URL: \'TESTING\'/g" ./src/app/app.config.ts'
+         echo 'Environment - Testing'
+      }
+    }
     stage('Build Angular') {
       steps {
-        echo 'Building Angular - Testing env'
-       
+        sh 'rm -rf ./node_modules'
+        sh 'npm install'
+        echo 'Building Angular.....'
+        sh 'ng build --prod --base-href ./'
         echo 'Build Complete'
       }
     }
     stage('Moving build files') {
       steps {
-        echo 'Moving build files to Server'
+        echo 'Moving build files to Local'
        
       }
     }
     stage('Build Success') {
       steps {
-        echo 'Sucessfully build - Testing env'
+        echo 'Sucessfully build - testing env'
       }
     }
   }
