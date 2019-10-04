@@ -8,4 +8,5 @@ import { AppConfigs } from '../app/app.config';
 })
 export class AppComponent {
   title = AppConfigs.SERVER_CONFIG.USE_URL;
+  
 }
