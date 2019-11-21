@@ -1,6 +1,6 @@
 export const AppConfigs = {
     SERVER_CONFIG: {
-      USE_URL: 'DEVELOPMENT'
+      USE_URL: 'DEVELOPMENT '
     }
   };
   
